@@ -13,3 +13,4 @@
 # The colon operator (:) returns every integer between two integers.
 # It is an easy way to create a sequence of numbers.
 # You can do inner multiplication with the %*% operator and outer multiplication with the %o% operator:
+die <- 1:d 
