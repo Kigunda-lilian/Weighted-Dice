@@ -33,6 +33,11 @@ matrix(card,ncol = 2)
 matrix(card,nrow = 5,byrow = T)
 # dim(card) <-  c(5,2)  #Code not working
 
+# Creating a dataframe. Use data.frame
+df <- data.frame(face = c("ace", "two", "six"),  
+                 suit = c("clubs", "clubs", "clubs"), value = c(1, 2, 3))
+df
+
 
 
 # Write functions that deal and shuffle
