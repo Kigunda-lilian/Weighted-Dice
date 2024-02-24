@@ -132,3 +132,20 @@ deck4$value[((deck4$face == "queen")&(deck4$suit == "spades"))]
 # method 2
 queenofspades <- deck4$face == "queen" & deck4$suit == "spades"
 deck4[queenofspades,]
+
+# Black jack game 
+# In blackjack, each number card has a value equal to its face value. Each face card (king, queen, or jack) has a value of 10. 
+# Finally, each ace has a value of 11 or 1, depending on the final results of the game.
+deck5 <- deck
+allin <-deck5$face %in% c("king", "queen", "jack")
+allin
+sum(allin)
+# method 2: using the or boolean operator
+either <- deck5$face == "king"|deck5$face == "queen"|deck5$face == "jack"
+either
+sum (either)
+deck5[either,]
+deck5[allin,]
+deck5$value[allin] <- 10
+deck5$value[allin]
+deck5[either,]
