@@ -3,7 +3,7 @@
 # project 2
 #This project will teach me how to store, retrieve, 
 # and change data values in my computer’s memory
-
+############################################################################
 # BUILD THE DECK
 # matrix will fill up the matrix column by column by default, 
 # but you can fill the matrix row by row if you include the argument byrow = TRUE:
@@ -149,3 +149,53 @@ deck5[allin,]
 deck5$value[allin] <- 10
 deck5$value[allin]
 deck5[either,]
+
+# ENVIRONMENTS
+#Checking the environments,extracting information from the environments and adding variables to the environments
+#library(pryr)
+#Error in library(pryr) : there is no package called ‘pryr’
+#> parenvs(all = TRUE)
+#Error in parenvs(all = TRUE) : could not find function "parenvs"
+#> globalenv()
+#<environment: R_GlobalEnv>
+ # > baseenv()
+#<environment: base>
+ # > emptyenv()
+#<environment: R_EmptyEnv>
+ # > parent.env(globalenv())
+#<environment: 0x0000025e1f4412a8>
+ # attr(,"name")
+#[1] "tools:rstudio"
+#> parent.env(emptyenv())
+#Error in parent.env(emptyenv()) : the empty environment has no parent
+#> ls(emptyenv())
+#character(0)
+#> ls(globalenv())
+#[1] "allin"         "ar"            "card"          "deck"          "deck2"        
+#[6] "deck3"         "deck4"         "deck5"         "df"            "dice"         
+#[11] "die"           "either"        "f"             "lst_list"      "queenofspades"
+#[16] "random"        "roll"          "shuffle"      
+#> head(globalenv()$deck, 3)
+#face   suit value
+#1  king spades    13
+#2 queen spades    12
+#3  jack spades    11
+#> assign("new", "Hello Global", envir = globalenv())
+#> 
+ # > 
+ # > globalenv()$new
+#[1] "Hello Global"
+#> 
+
+
+# MISSING INFORMATION
+#na.rm, which stands for NA remove. R will ignore NAs when it evaluates a function if you add the argument na.rm = TRUE:
+mean(c(NA, 1:50), na.rm = TRUE)
+#  R supplies a special function that can test whether a value is an NA. The function is sensibly named is.na:
+is.na(NA)
+vec <- c(1, 2, 3, NA)
+is.na(vec)
+
+
+# Notice that assign works similar to <-. If an object already exists with the given name in the given environment, 
+# assign will overwrite it without asking for permission.
