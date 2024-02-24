@@ -41,5 +41,26 @@ df
 
 
 # Write functions that deal and shuffle
+
+# selecting random cards from the deck
+random <- sample(1:52, size = 52)
+random
+
+deck2 <- deck[random, ]
+head(deck2)
+
+# shuffle function
+shuffle <- function(deck){
+  random <- sample(1:52, size = 52)
+  random
+  
+  deck2 <- deck[random, ]
+  head(deck2)
+}
+shuffle(deck)
+shuffle(deck)
 # Change the point system to suit your game
 # Manage the state of the deck
+
+# LISTS
+lst_list <- list(numbers = c(1, 2), logical = TRUE, strings = c("a", "b", "c"))
