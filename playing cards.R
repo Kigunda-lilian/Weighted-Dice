@@ -43,4 +43,3 @@ df
 # Write functions that deal and shuffle
 # Change the point system to suit your game
 # Manage the state of the deck
-# 

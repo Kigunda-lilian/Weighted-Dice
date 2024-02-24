@@ -14,9 +14,12 @@
 # It is an easy way to create a sequence of numbers.
 # You can do inner multiplication with the %*% operator and outer multiplication with the %o% operator:
 
-roll(){
+# A function to roll the dice
+roll <- function(){
   die <- 1:6
+  # sample function
   dice <- sample(die,size = 2,replace = T)
   dice
   sum(dice)
-}
+  }
+roll()
