@@ -99,3 +99,36 @@ deck2$face == "ace"
 deck2$value[deck2$face == "ace"][1] <- 1
 deck2$value[deck2$face == "ace"]
 deck2$value[deck2$face == "ace"] <- 14
+
+# changing the hearts to zero
+# make a copy of the dataframe
+deck4 <- deck
+# confirming that the dataframe has been duplicated in deck4 variable
+head(deck4)
+# In hearts, every card has a value of zero
+deck4$value <- 0
+deck4$value
+# selecting cards in the queen of spades
+((deck4$face == "queen")&(deck4$suit == "spades"))
+
+# method2
+deck4$face == "queen" & deck4$suit == "spades"
+sum((deck4$face == "queen")&(deck4$suit == "spades"))
+
+# selecting cards in the suit of hearts
+(deck4$suit == "hearts")
+sum(deck4$suit == "hearts")
+
+# using my test to select the values of these cards:
+deck4$value[deck4$suit == "hearts"]
+deck4$value[deck4$suit == "hearts"]
+
+# Assigning new number to these values
+deck4$value[deck4$suit == "hearts"] <- 1
+deck4$value[deck4$suit == "hearts"]
+deck4$value[((deck4$face == "queen")&(deck4$suit == "spades"))] <- 13
+deck4$value[((deck4$face == "queen")&(deck4$suit == "spades"))]
+
+# method 2
+queenofspades <- deck4$face == "queen" & deck4$suit == "spades"
+deck4[queenofspades,]
