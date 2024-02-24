@@ -64,3 +64,25 @@ shuffle(deck)
 
 # LISTS
 lst_list <- list(numbers = c(1, 2), logical = TRUE, strings = c("a", "b", "c"))
+lst_list[1]
+lst_list[[1]]
+sum(lst_list[1]) #This does not work
+# method 1
+sum(lst_list[[1]])
+# method 2
+sum(lst_list$numbers)
+
+# make a copy of deck
+deck3 <- deck
+# adding new variables to your data set
+deck3$new <- 1:52
+head(deck3)
+# Removing columns in a dataset
+deck3$new <- NULL
+head(deck3)
+# Changing aces at every 13th position from 1 to 14
+deck3[c(13, 26, 39, 52), ]
+
+# You can single out just the values of the aces by subsetting the columns dimension of deck3. 
+# Or, even better, you can subset the column vector deck3$value:
+deck3[c(13,26,39,52),3]
