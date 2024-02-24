@@ -86,3 +86,16 @@ deck3[c(13, 26, 39, 52), ]
 # You can single out just the values of the aces by subsetting the columns dimension of deck3. 
 # Or, even better, you can subset the column vector deck3$value:
 deck3[c(13,26,39,52),3]
+# method 2: selecting
+deck3$value[c(13,26,39,52)]
+deck3$value[c(13, 26, 39, 52)] <- c(14, 14, 14, 14)
+deck3$value[c(13,26,39,52)]
+# method 2: assigning new values
+deck3$value[c(13, 26, 39, 52)] <- 14
+deck3$value[c(13,26,39,52)]
+head(deck2)
+deck2$value[deck2$face == "ace"]
+deck2$face == "ace"
+deck2$value[deck2$face == "ace"][1] <- 1
+deck2$value[deck2$face == "ace"]
+deck2$value[deck2$face == "ace"] <- 14
