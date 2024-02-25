@@ -48,7 +48,7 @@ if(symbols_1[1] == symbols_1[2]& symbols_1[2]==symbols_1[3]){
 }else{
   print("not equal")
 }
-# method 2
+# method 2: checking three of a kind
 symbols_1[1] == symbols_1[2] & symbols_1[1] == symbols_1[3]
-# method 3
+# method 3: checking three of a kind
 all(symbols_1 == symbols_1[1])
