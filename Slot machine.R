@@ -35,3 +35,20 @@ if (dec >= 0.5) {
 }
 a
 dec
+
+symbols_1 <- c("7","7","7")
+symbols_2 <- c("dd","0","7")
+if(symbols_2[1] == symbols_2[2]& symbols_2[2]==symbols_2[3]){
+  print("all are equal")
+}else{
+  print("not equal")
+}
+if(symbols_1[1] == symbols_1[2]& symbols_1[2]==symbols_1[3]){
+  print("all are equal")
+}else{
+  print("not equal")
+}
+# method 2
+symbols_1[1] == symbols_1[2] & symbols_1[1] == symbols_1[3]
+# method 3
+all(symbols_1 == symbols_1[1])
