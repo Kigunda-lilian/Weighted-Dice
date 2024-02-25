@@ -3,6 +3,7 @@
 # project 2
 #This project will teach me how to store, retrieve, 
 # and change data values in my computer’s memory
+# setting the language in the system environment to english:Sys.setenv(LANG = "en")
 ############################################################################
 # BUILD THE DECK
 # matrix will fill up the matrix column by column by default, 
@@ -199,3 +200,20 @@ is.na(vec)
 
 # Notice that assign works similar to <-. If an object already exists with the given name in the given environment, 
 # assign will overwrite it without asking for permission.
+
+# checking the active environment
+#  R creates a new environment each time you run a function.
+environment()
+show_env <- function(){
+  list(ran.in = environment(), 
+       parent = parent.env(environment()), 
+       objects = ls.str(environment()))
+}
+show_env()
+# You can look up a function’s origin environment by running environment on the function:
+environment(show_env)
+# getting the first card only. -ves means that the cards should not be shown.
+deck_0 <- deck[-2:-52,]
+deck_0
+deck_01 <- deck[-1,]
+deck_01
