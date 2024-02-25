@@ -52,3 +52,30 @@ if(symbols_1[1] == symbols_1[2]& symbols_1[2]==symbols_1[3]){
 symbols_1[1] == symbols_1[2] & symbols_1[1] == symbols_1[3]
 # method 3: checking three of a kind
 all(symbols_1 == symbols_1[1])
+
+# method 4: checking three of a kind
+# The unique function returns every unique term that appears in a vector. 
+# If your symbols vector contains three of a kind (i.e., one unique term that appears three times), then unique(symbols) will return a vector of length 1.
+length(unique(symbols_1) == 1)
+length(unique(symbols_2) == 1)
+
+three_of_a_kind_1 <- symbols_1[1] == symbols_1[2]&& symbols_1[2]==symbols_1[3]
+three_of_a_kind_2 <- symbols_2[1] == symbols_2[2]&& symbols_2[2]==symbols_2[3]
+three_of_a_kind_1
+three_of_a_kind_2
+# && and || are not vectorized, which means they can only handle a single logical test on each side of the operator.
+
+# test for all bars
+#symbols_3 <- c("B", "BBB", "BB")
+"B" %in% symbols_3
+#symbols_4 <- c("BBB", "BBB", "BBB")
+"B" %in%  symbols_4
+
+# Method 1
+symbols_3[1] == "B" | symbols_3[1] == "BB" | symbols_3[1] == "BBB" &
+  symbols_3[2] == "B" | symbols_3[2] == "BB" | symbols_3[2] == "BBB" &
+  symbols_3[3] == "B" | symbols_3[3] == "BB" | symbols_3[3] == "BBB"
+# method 2
+# You can often replace multiple | operators with a single %in%. Also, you can check that a test is true for each element in a vector with all. 
+# These two changes shorten the preceding code to:
+all(symbols_3 %in% c("B", "BB", "BBB")) #always remember that what is being tested is on the left
