@@ -121,3 +121,9 @@ score <- function (symbols) {
   diamonds <- sum(symbols == "DD")
   prize * 2 ^ diamonds
 }
+play <- function() {
+  symbols <- get_symbols()
+  print(symbols)
+  score(symbols)
+}
+play()
